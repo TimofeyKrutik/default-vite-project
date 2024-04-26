@@ -101,3 +101,22 @@ export const Home = () => {
         </Flex>
     )
 }
+<chakra.form
+    onSubmit={(e :FormEvent<HTMLFormElement> ) :void => {
+        e.preventDefault()
+        createTodoHandler(text)
+    }}
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    gap="20px"
+
+    <input
+        placeholder="Напишите задачу..."
+        maxLength={80}
+        value={text}
+        onChange={(e :FormEvent<HTMLInputElement> ) :void => setText(e.target.value)}
+        w="300px"
+        h="32px"
+    />
+    
